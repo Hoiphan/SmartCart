@@ -1,0 +1,36 @@
+[
+    {
+        "product_id": 1,
+        "product_name": "Diary Milk",
+        "price": "49000",
+        "category": "Drink",
+        "description": "Sữa tươi nguyên chất, giàu canxi và vitamin, tốt cho sức khỏe.",
+        "brand": "Vinamilk",
+        "origin": "Việt Nam",
+        "expiry_date": "2025-12-31",
+        "manufacture_date": "2024-01-15",
+        "volume": "180ml",
+        "ingredients": ["Sữa bò tươi", "Đường", "Hương vani"],
+        "nutrition_facts": {
+            "calories": 120,
+            "protein": "3g",
+            "fat": "4g",
+            "carbohydrates": "12g"
+        },
+        "stock": 150,
+        "rating": 4.5,
+        "image": "path/to/image",
+        "reviews": [
+            {
+                "user": "Nguyễn Văn A",
+                "comment": "Sữa thơm ngon, bé nhà mình rất thích!",
+                "rating": 5
+            },
+            {
+                "user": "Trần Thị B",
+                "comment": "Sữa uống ổn nhưng hơi ngọt.",
+                "rating": 4
+            }
+        ]
+    }
+]
