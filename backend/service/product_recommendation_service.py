@@ -1,3 +1,8 @@
+# FP-Growth
+# Content-based Recommendation System
+# Markov Chain
+# MLP
+
 class ProductRecommendationService:
     def __init__(self):
         pass
