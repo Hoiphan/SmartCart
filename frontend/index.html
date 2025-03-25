@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <a href="#">🔔 Thông Báo</a>
+            <a href="#">Hỗ Trợ</a>
+            <a href="#">Tiếng Việt</a>
+        </div>
+
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="shopping-cart">🛒</span>
+        </div>
+        <div class="cart-title">Giỏ Hàng</div>
+        <div class="search-bar">
+            <div class="input-wrapper">
+                <input type="text" placeholder="Tìm kiếm sản phẩm">
+                <img src="images/image00.jpg" alt="Microphone Icon" class="microphone-icon">
+                <img src="images/image0.jpg" alt="Camera Icon" class="camera-icon">
+            </div>
+            <button class="search-btn">🔍</button>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="checkbox">
+            <input type="checkbox" id="select-all">
+            <label for="select-all">Sản Phẩm</label>
+        </div>
+        <div class="filter-options">
+            <span>Đơn Giá</span>
+            <span>Số Lượng</span>
+            <span>Số Tiền</span>
+            <span>Thao Tác</span>
+        </div>
+    </section>
+
+    <!-- Product List -->
+    <section class="product-list" id="product-list">
+        <div class="shop-section">
+            <input type="checkbox" id="shop-checkbox">
+            <label for="shop-checkbox">
+                <span class="shop-icon">🛍️</span> Shop
+            </label>
+        </div>
+        <div class="deal-section">
+            <span class="deal-label">Deal Sốc</span>
+            <a href="#">Mua Kèm Deal Sốc với mức giá ưu đãi! <span class="add-more">Thêm</span></a>
+        </div>
+        <div class="product-item" data-price="189000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image1.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Áo Phông Form Rộng In Chữ Lu cký AVIS Áo Thun Cổ Tròn Lộc...</h3>
+                <p class="variant">Phân Loại Hàng: <span>XANH NAVY, L</span></p>
+                <p class="price"><span class="original-price">₫329.000</span> <span
+                        class="discounted-price">₫189.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫189.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+            <p class="flash-sale">FLASH SALE kết thúc 17:00</p>
+        </div>
+        <div class="product-item" data-price="186000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image2.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Nước Giặt Comfort Đa Năng Dịu Nhẹ 3,1KG</h3>
+                <p class="variant">Phân Loại Hàng: <span>Thơm Hương Phấn</span></p>
+                <p class="price"><span class="original-price">₫205.000</span> <span
+                        class="discounted-price">₫186.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫186.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-item" data-price="39000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image3.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Ổi chín cây ngon dòn ngọt trọng lượng 1 kí</h3>
+                <p class="variant"></p> 
+                <p class="price"><span class="original-price">₫50.000</span> <span
+                        class="discounted-price">₫39.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫39.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-item" data-price="50000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image4.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Tẩy cặn canxi, tẩy kính, vòi sen, bồn sứ, chậu tắm, gạch men, gư...</h3>
+                <p class="variant"></p>
+                <p class="price"><span class="original-price">₫119.000</span> <span
+                        class="discounted-price">₫50.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫50.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-item" data-price="189000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image5.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Khăn Tắm Gội Mặt Royal Towel 100% Cotton Thêu Hình Động V...</h3>
+                <p class="variant">Phân Loại Hàng: <span>Khăn mặt 30x50cm</span></p>
+                <p class="price"><span class="original-price">₫329.000</span> <span
+                        class="discounted-price">₫189.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫189.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-item" data-price="189000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image6.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Ba Rọi Heo Thái Lát khay 400g</h3>
+                <p class="variant"></p> 
+                <p class="price"><span class="original-price">₫329.000</span> <span
+                        class="discounted-price">₫189.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫189.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-item" data-price="189000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image7.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>1Kg Cá Basa cắt khúc đông lạnh - JOYFUL DAY</h3>
+                <p class="variant">Phân Loại Hàng: <span>Basa cắt khúc 500gr</span></p>
+                <p class="price"><span class="original-price">₫329.000</span> <span
+                        class="discounted-price">₫189.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫189.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-item" data-price="82000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image8.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Bánh Top Socola 360gram (12 gói)</h3>
+                <p class="variant"></p> 
+                <p class="price"><span class="discounted-price">₫82.000</span></p> 
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫82.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-item" data-price="150000">
+            <input type="checkbox" class="product-checkbox">
+            <img src="images/image9.jpg" alt="Product Image">
+            <div class="product-details">
+                <h3>Nguyên thùng mỳ tôm Hảo Hảo, Kokomi 90g, 3 miền, Ô ma chi, z...</h3>
+                <p class="variant">Phân Loại Hàng: <span>Hảo hảo, Nguyên thùng</span></p>
+                <p class="price"><span class="original-price">₫195.000</span> <span
+                        class="discounted-price">₫150.000</span></p>
+                <div class="quantity">
+                    <button class="decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+                <p class="total-price">₫150.000</p>
+                <div class="actions">
+                    <a href="#" class="remove">Xóa</a>
+                    <a href="#" class="similar">Tìm sản phẩm tương tự</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Summary Section -->
+    <footer class="summary-section">
+        <div class="select-all">
+            <input type="checkbox" id="select-all-footer">
+            <label for="select-all-footer">Chọn Tất Cả (<span id="total-items">2</span>)</label>
+        </div>
+        <div class="actions">
+            <a href="#" id="remove-selected">Xóa</a>
+            <a href="#">Bỏ sản phẩm không hoạt động</a>
+        </div>
+        <div class="voucher-section">
+            <button class="voucher-btn"> Voucher</button>
+            <span class="ma-amount">Bạn chưa chọn sản phẩm</span>
+            <span class="ma-value">-₫0</span>
+        </div>
+        </div>
+        <div class="total">
+            <p>Tổng thanh toán (<span id="selected-items">0</span> Sản phẩm): <span id="total-price">₫0</span></p>
+            <button class="checkout">Mua Hàng</button>
+        </div>
+    </footer>
+
+    <div class="chat-icon">💬 Chat <span class="chat-badge">1</span></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
