@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPriceSpan = document.getElementById('total-price');
     const removeSelectedBtn = document.getElementById('remove-selected');
 
-    // Debugging: Verify elements are found
+ 
     console.log('selectAll:', selectAll);
     console.log('selectAllFooter:', selectAllFooter);
     console.log('shopCheckbox:', shopCheckbox);
     console.log('productCheckboxes:', productCheckboxes);
 
-    // Function to format price with Vietnamese currency
+   
     const formatPrice = (price) => {
         return `₫${price.toLocaleString('vi-VN')}`;
     };
@@ -51,27 +51,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Select All functionality
     const toggleSelectAll = (event) => {
-        const isChecked = event.target.checked; // Use the state of the checkbox that triggered the event
-        console.log('Toggle Select All triggered, isChecked:', isChecked); // Debugging
+        const isChecked = event.target.checked;
+        console.log('Toggle Select All triggered, isChecked:', isChecked);
 
-        // Update all product checkboxes
+       
         productCheckboxes.forEach(checkbox => {
             checkbox.checked = isChecked;
         });
 
-        // Update shop checkbox
+    
         if (shopCheckbox) {
             shopCheckbox.checked = isChecked;
         }
 
-        // Sync the other "Select All" checkbox
         selectAll.checked = isChecked;
         selectAllFooter.checked = isChecked;
 
         calculateTotal();
     };
 
-    // Attach event listeners to both "Select All" checkboxes
+   
     if (selectAll) {
         selectAll.addEventListener('change', toggleSelectAll);
     } else {
@@ -84,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('selectAllFooter element not found');
     }
 
-    // Shop Checkbox
+   
     if (shopCheckbox) {
         shopCheckbox.addEventListener('change', () => {
             const isChecked = shopCheckbox.checked;
@@ -118,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Quantity controls
+   
     productItems.forEach(item => {
         const decreaseBtn = item.querySelector('.decrease');
         const increaseBtn = item.querySelector('.increase');
