@@ -10,18 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPriceSpan = document.getElementById('total-price');
     const removeSelectedBtn = document.getElementById('remove-selected');
 
- 
+    
     console.log('selectAll:', selectAll);
     console.log('selectAllFooter:', selectAllFooter);
     console.log('shopCheckbox:', shopCheckbox);
     console.log('productCheckboxes:', productCheckboxes);
 
-   
+  
     const formatPrice = (price) => {
         return `₫${price.toLocaleString('vi-VN')}`;
     };
 
-    // Function to calculate total price
     const calculateTotal = () => {
         let total = 0;
         let selectedCount = 0;
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPriceSpan.textContent = formatPrice(total);
     };
 
-    // Function to update individual product total
+
     const updateProductTotal = (item) => {
         const price = parseInt(item.getAttribute('data-price')) || 0;
         const quantity = parseInt(item.querySelector('.quantity-input').value);
@@ -49,28 +48,24 @@ document.addEventListener('DOMContentLoaded', () => {
         calculateTotal();
     };
 
-    // Select All functionality
     const toggleSelectAll = (event) => {
         const isChecked = event.target.checked;
         console.log('Toggle Select All triggered, isChecked:', isChecked);
 
-       
         productCheckboxes.forEach(checkbox => {
             checkbox.checked = isChecked;
         });
 
-    
         if (shopCheckbox) {
             shopCheckbox.checked = isChecked;
         }
 
-        selectAll.checked = isChecked;
-        selectAllFooter.checked = isChecked;
+        if (selectAll) selectAll.checked = isChecked;
+        if (selectAllFooter) selectAllFooter.checked = isChecked;
 
         calculateTotal();
     };
 
-   
     if (selectAll) {
         selectAll.addEventListener('change', toggleSelectAll);
     } else {
@@ -83,33 +78,31 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('selectAllFooter element not found');
     }
 
-   
     if (shopCheckbox) {
         shopCheckbox.addEventListener('change', () => {
             const isChecked = shopCheckbox.checked;
-            console.log('Shop Checkbox changed, isChecked:', isChecked); // Debugging
+            console.log('Shop Checkbox changed, isChecked:', isChecked);
 
             productCheckboxes.forEach(checkbox => {
                 checkbox.checked = isChecked;
             });
 
             const allChecked = Array.from(productCheckboxes).every(cb => cb.checked);
-            selectAll.checked = allChecked;
-            selectAllFooter.checked = allChecked;
+            if (selectAll) selectAll.checked = allChecked;
+            if (selectAllFooter) selectAllFooter.checked = allChecked;
             calculateTotal();
         });
     } else {
         console.error('shopCheckbox element not found');
     }
 
-    // Individual checkbox change
     productCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', () => {
             const allChecked = Array.from(productCheckboxes).every(cb => cb.checked);
-            console.log('Individual checkbox changed, allChecked:', allChecked); // Debugging
+            console.log('Individual checkbox changed, allChecked:', allChecked);
 
-            selectAll.checked = allChecked;
-            selectAllFooter.checked = allChecked;
+            if (selectAll) selectAll.checked = allChecked;
+            if (selectAllFooter) selectAllFooter.checked = allChecked;
             if (shopCheckbox) {
                 shopCheckbox.checked = allChecked;
             }
@@ -117,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-   
     productItems.forEach(item => {
         const decreaseBtn = item.querySelector('.decrease');
         const increaseBtn = item.querySelector('.increase');
@@ -145,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Remove individual product
     productItems.forEach(item => {
         const removeBtn = item.querySelector('.remove');
         removeBtn.addEventListener('click', (e) => {
@@ -158,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Remove selected products
     removeSelectedBtn.addEventListener('click', (e) => {
         e.preventDefault();
         if (confirm('Bạn có chắc muốn xóa các sản phẩm đã chọn?')) {
@@ -169,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
             totalItemsSpan.textContent = document.querySelectorAll('.product-item').length;
-            selectAll.checked = false;
-            selectAllFooter.checked = false;
+            if (selectAll) selectAll.checked = false;
+            if (selectAllFooter) selectAllFooter.checked = false;
             if (shopCheckbox) {
                 shopCheckbox.checked = false;
             }
@@ -178,7 +168,106 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initial calculation
     totalItemsSpan.textContent = productItems.length;
     calculateTotal();
+
+   
+    const adMainSlider = document.querySelector('.ad-main-slides');
+    const adMainSlides = document.querySelectorAll('.ad-main-slide');
+    const adMainPrevBtn = document.querySelector('.ad-main-prev');
+    const adMainNextBtn = document.querySelector('.ad-main-next');
+    const adMainDots = document.querySelectorAll('.main-dot');
+    let currentMainAdIndex = 0;
+
+    const showMainAdSlide = (index) => {
+        adMainSlides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            adMainDots[i].classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+                adMainDots[i].classList.add('active');
+            }
+        });
+    };
+
+    const nextMainAdSlide = () => {
+        currentMainAdIndex = (currentMainAdIndex + 1) % adMainSlides.length;
+        showMainAdSlide(currentMainAdIndex);
+    };
+
+    const prevMainAdSlide = () => {
+        currentMainAdIndex = (currentMainAdIndex - 1 + adMainSlides.length) % adMainSlides.length;
+        showMainAdSlide(currentMainAdIndex);
+    };
+
+    let autoMainSlide = setInterval(nextMainAdSlide, 5000);
+
+    if (adMainSlider) {
+        adMainSlider.addEventListener('mouseenter', () => {
+            clearInterval(autoMainSlide);
+        });
+
+        adMainSlider.addEventListener('mouseleave', () => {
+            autoMainSlide = setInterval(nextMainAdSlide, 5000);
+        });
+    }
+
+    if (adMainPrevBtn) {
+        adMainPrevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevMainAdSlide();
+        });
+    }
+
+    if (adMainNextBtn) {
+        adMainNextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextMainAdSlide();
+        });
+    }
+
+    adMainDots.forEach((dot, index) => {
+        dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentMainAdIndex = index;
+            showMainAdSlide(currentMainAdIndex);
+        });
+    });
+
+    showMainAdSlide(currentMainAdIndex);
+
+    // Chat functionality
+    const chatIcon = document.querySelector('.chat-icon');
+    const chatWindow = document.getElementById('chat-window');
+    const chatCloseBtn = document.querySelector('.chat-close-btn');
+
+    console.log('chatIcon:', chatIcon);
+    console.log('chatWindow:', chatWindow);
+    console.log('chatCloseBtn:', chatCloseBtn);
+
+    if (chatIcon) {
+        chatIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            console.log('Chat icon clicked');
+            if (chatWindow) {
+                chatWindow.classList.toggle('active');
+            } else {
+                console.error('chatWindow not found when clicking chatIcon');
+            }
+        });
+    } else {
+        console.error('chatIcon not found');
+    }
+
+    if (chatCloseBtn) {
+        chatCloseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            console.log('Close button clicked');
+            if (chatWindow) {
+                chatWindow.classList.remove('active');
+            }
+        });
+    } else {
+        console.error('chatCloseBtn not found');
+    }
 });
