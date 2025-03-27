@@ -1,50 +1,62 @@
-import sys
-import os
+from fastapi import Body, FastAPI
+from pydantic import BaseModel
+from fastapi import Request
 
-# Add the 'service' folder to the system path so we can import from it
-sys.path.append(os.path.join(os.path.dirname(__file__), 'service'))
 
-# Import the ProductSearching class from the product_searching_service module
-from product_searching_service import ProductSearching
-from promotion_recommendation_service import PromotionRecommendationService
 
-def main():
-    # Create an instance of the ProductSearching class
-    product_search = ProductSearching()
+##import assistant
+from service.assistant_service.func_prompt import res_gemini
+from service.product_recommendation_service import product_searching
+from service.product_searching_service import promotion_recommendation
+
+
+app = FastAPI()
+
+
+class Item(BaseModel):
+    name: str
+    des: str = None
+    price: float
+    tax: float = None
+
+
+# Request model (optional but recommended)
+class TextInput(BaseModel):
+    text: str
+
+class SearchRequest(BaseModel):
+    query: str
     
-    # Test input string (you can modify this for different searches)
-    user_input = input("Enter product name to search: ")
+class CartRequest(BaseModel):
+    current_cart: list[Item]  
+
+@app.post("/items/")
+def create_items(items: Item):
+    return {"item_name": items.name, "item_price": items.price}
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World"}
+
+@app.get("/item/{items_id}")
+def read_item(items_id: int, q: str = 'Hello'):
+    return {'item': items_id, "q": q}
+
+@app.post("/assist")
+def ask_gemini(
+    text: str = Body(..., media_type="text/plain")  # ← Accepts raw text
+):
+    text_gemini = res_gemini(text)
     
-    # Get the closest products based on the input string
-    closest_products = product_search.search(user_input)
-    
-    # Display the closest products
-    if closest_products:
-        print(f"Top {len(closest_products)} closest products to '{user_input}':")
-        for product in closest_products:
-            print(f"Product Name: {product['product_name']}")
-            print(f"Price: {product['price']}")
-            print(f"Description: {product['description']}")
-            print(f"Rating: {product['rating']}")
-            print("-" * 40)
-    else:
-        print("No products found.")
-        
-    current_cart = [
-        {"product_id": 1, "product_name": "Diary Milk", "price": "49000"},
-        {"product_id": 2, "product_name": "TH Milk", "price": "50000"}
-    ]
+    return {"response": f"{text_gemini}"}  # Return as plain text or JSON
 
-    promo_service = PromotionRecommendationService()
-    promotions = promo_service.recommend_promotion(current_cart)
+@app.post("/search/")
+def search_products(request: SearchRequest):
+    results = product_searching(request.query)
+    return {"results": results}
 
-    if promotions:
-        print("🎉 Promotions Found:")
-        for promo in promotions:
-            print(f"🔹 {promo['product_name']}: {promo['description']}")
-    else:
-        print("❌ No promotions available.")
-
-
-if __name__ == "__main__":
-    main()
+@app.post("/recommend_promotion/")
+def recommend_promotion(request: CartRequest):
+    results = promotion_recommendation(request.current_cart)
+    return {"recommended_promotions": results}

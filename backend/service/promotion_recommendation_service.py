@@ -27,3 +27,7 @@ class PromotionRecommendationService:
                     })
         
         return recommended_promotions
+    
+def promotion_recommendation(current_cart):
+    promotion_service = PromotionRecommendationService()
+    return promotion_service.recommend_promotion(current_cart)

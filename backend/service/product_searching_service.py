@@ -27,3 +27,7 @@ class ProductSearching:
         distances.sort(key=lambda x: x[1], reverse=True)
         
         return [item[0] for item in distances[:5]]
+    
+def product_searching(input):
+    product_service = ProductSearching()
+    return product_service.search(input)
