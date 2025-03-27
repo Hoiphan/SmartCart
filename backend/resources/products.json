@@ -19,7 +19,7 @@
         },
         "stock": 150,
         "rating": 4.5,
-        "image": "path/to/image",
+        "image": "D:/Ming Lu Zhuang 2024/HCMUT/HK242/Do_an/backend/resources/images/sua_bo.jpg",
         "reviews": [
             {
                 "user": "Nguyễn Văn A",
@@ -29,6 +29,142 @@
             {
                 "user": "Trần Thị B",
                 "comment": "Sữa uống ổn nhưng hơi ngọt.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "product_id": 2,
+        "product_name": "Cà Phê Đen",
+        "price": "35000",
+        "category": "Drink",
+        "description": "Cà phê đen nguyên chất, không đường, giúp tỉnh táo và tập trung.",
+        "brand": "Trung Nguyên",
+        "origin": "Việt Nam",
+        "expiry_date": "2026-06-15",
+        "manufacture_date": "2024-03-01",
+        "volume": "250ml",
+        "ingredients": ["Cà phê Arabica", "Cà phê Robusta"],
+        "nutrition_facts": {
+            "calories": 5,
+            "protein": "0g",
+            "fat": "0g",
+            "carbohydrates": "1g"
+        },
+        "stock": 200,
+        "rating": 4.8,
+        "image": "path/to/image2",
+        "reviews": [
+            {
+                "user": "Lê Văn C",
+                "comment": "Cà phê đậm vị, rất thơm!",
+                "rating": 5
+            },
+            {
+                "user": "Hoàng Thị D",
+                "comment": "Ngon nhưng hơi đắng với mình.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "product_id": 3,
+        "product_name": "Nước Ép Cam",
+        "price": "42000",
+        "category": "Drink",
+        "description": "Nước ép cam nguyên chất, giàu vitamin C, tốt cho sức khỏe.",
+        "brand": "TH True Juice",
+        "origin": "Việt Nam",
+        "expiry_date": "2025-09-10",
+        "manufacture_date": "2024-02-20",
+        "volume": "300ml",
+        "ingredients": ["Nước cam tươi", "Vitamin C"],
+        "nutrition_facts": {
+            "calories": 90,
+            "protein": "1g",
+            "fat": "0g",
+            "carbohydrates": "22g"
+        },
+        "stock": 180,
+        "rating": 4.7,
+        "image": "path/to/image3",
+        "reviews": [
+            {
+                "user": "Nguyễn Huy E",
+                "comment": "Rất tươi mát, hương vị tự nhiên.",
+                "rating": 5
+            },
+            {
+                "user": "Phạm Minh F",
+                "comment": "Ngon nhưng giá hơi cao.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "product_id": 4,
+        "product_name": "Trà Xanh Không Độ",
+        "price": "15000",
+        "category": "Drink",
+        "description": "Trà xanh thanh mát, giúp giải nhiệt và làm đẹp da.",
+        "brand": "Tân Hiệp Phát",
+        "origin": "Việt Nam",
+        "expiry_date": "2025-07-30",
+        "manufacture_date": "2024-04-10",
+        "volume": "500ml",
+        "ingredients": ["Trà xanh", "Đường", "Hương tự nhiên"],
+        "nutrition_facts": {
+            "calories": 60,
+            "protein": "0g",
+            "fat": "0g",
+            "carbohydrates": "15g"
+        },
+        "stock": 300,
+        "rating": 4.6,
+        "image": "path/to/image4",
+        "reviews": [
+            {
+                "user": "Lương Thị G",
+                "comment": "Uống mát, giải khát tốt.",
+                "rating": 5
+            },
+            {
+                "user": "Vũ Quang H",
+                "comment": "Hơi ngọt so với khẩu vị của mình.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "product_id": 5,
+        "product_name": "Nước Dừa Tươi",
+        "price": "28000",
+        "category": "Drink",
+        "description": "Nước dừa tươi tự nhiên, không đường, tốt cho sức khỏe.",
+        "brand": "Bến Tre Fresh",
+        "origin": "Việt Nam",
+        "expiry_date": "2025-08-20",
+        "manufacture_date": "2024-03-18",
+        "volume": "330ml",
+        "ingredients": ["Nước dừa tươi"],
+        "nutrition_facts": {
+            "calories": 45,
+            "protein": "1g",
+            "fat": "0g",
+            "carbohydrates": "11g"
+        },
+        "stock": 250,
+        "rating": 4.9,
+        "image": "path/to/image5",
+        "reviews": [
+            {
+                "user": "Đặng Văn I",
+                "comment": "Ngon, tươi, không có chất bảo quản.",
+                "rating": 5
+            },
+            {
+                "user": "Hồ Thị K",
+                "comment": "Vị hơi nhạt, nhưng tự nhiên.",
                 "rating": 4
             }
         ]
