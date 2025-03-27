@@ -81,9 +81,9 @@ def res_gemini(prompt: str):
 
     return response.text
 
-while True:
-    x = input("Hãy cho tôi 1 số món ăn yêu thích của bạn: ")
-    print(res_gemini(x))
+# while True:
+#     x = input("Hãy cho tôi 1 số món ăn yêu thích của bạn: ")
+#     print(res_gemini(x))
 
 
 
