@@ -19,7 +19,7 @@
         },
         "stock": 150,
         "rating": 4.5,
-        "image": "D:/Ming Lu Zhuang 2024/HCMUT/HK242/Do_an/backend/resources/images/sua_bo.jpg",
+        "image": "/home/hoiphan/Documents/DoANAI/multi-major_project/backend/resources/images/sua_bo.jpg",
         "reviews": [
             {
                 "user": "Nguyễn Văn A",
