@@ -1,12 +1,35 @@
 import socket
 import threading
 import cv2
+import mysql.connector
 
 TCP_IP = "0.0.0.0"
 TCP_PORT = 5005
 
 UDP_URL = "udp://192.168.0.103:1234"
 
+# Kết nối MySQL
+def connect_db():
+    return mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="000000",
+        database="SmartCart"
+    )
+
+
+def save_to_mysql(weight, voltage):
+    try:
+        db = connect_db()
+        cursor = db.cursor()
+        sql = "INSERT INTO Cart (weight, voltage) VALUES (%s, %s)"
+        cursor.execute(sql, (weight, voltage))
+        db.commit()
+        cursor.close()
+        db.close()
+        print(f"Lưu thành công: {weight} g | {voltage} V")
+    except Exception as e:
+        print("Lỗi lưu MySQL:", e)
 
 def receive_tcp_data():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -24,6 +47,8 @@ def receive_tcp_data():
             if not data:
                 break
             print(f"data: {data}")
+            weight, voltage = map(float, data.split(","))
+            save_to_mysql(weight, voltage)
         except Exception as e:
             print("Lỗi:", e)
             break
