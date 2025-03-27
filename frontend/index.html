@@ -36,17 +36,60 @@
         </div>
     </header>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="checkbox">
-            <input type="checkbox" id="select-all">
-            <label for="select-all">Sản Phẩm</label>
-        </div>
-        <div class="filter-options">
-            <span>Đơn Giá</span>
-            <span>Số Lượng</span>
-            <span>Số Tiền</span>
-            <span>Thao Tác</span>
+
+
+    <section class="advertisement-section">
+        <div class="ad-container">
+            <div class="ad-main-slider">
+                <div class="ad-main-slides">
+                    <!-- Slide 1 -->
+                    <div class="ad-main-slide active">
+                        <a href="https://example.com/ad1" target="_blank">
+                            <img src="images/ad1.jpg" alt="Quảng cáo chính 1">
+                        </a>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="ad-main-slide">
+                        <a href="https://example.com/ad2" target="_blank">
+                            <img src="images/ad2.jpg" alt="Quảng cáo chính 2">
+                        </a>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="ad-main-slide">
+                        <a href="https://example.com/ad3" target="_blank">
+                            <img src="images/ad3.jpg" alt="Quảng cáo chính 3">
+                        </a>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="ad-main-slide">
+                        <a href="https://example.com/ad4" target="_blank">
+                            <img src="images/ad4.jpg" alt="Quảng cáo chính 4">
+                        </a>
+                    </div>
+                </div>
+                <button class="ad-main-prev">❮</button>
+                <button class="ad-main-next">❯</button>
+                <div class="ad-main-dots">
+                    <span class="main-dot active"></span>
+                    <span class="main-dot"></span>
+                    <span class="main-dot"></span>
+                    <span class="main-dot"></span>
+                </div>
+            </div>
+            <div class="ad-side">
+                <!-- Quảng cáo phụ 1 -->
+                <div class="ad-side-item">
+                    <a href="https://example.com/ad5" target="_blank">
+                        <img src="images/ad5.jpg" alt="Quảng cáo phụ 1">
+                    </a>
+                </div>
+                <!-- Quảng cáo phụ 2 -->
+                <div class="ad-side-item">
+                    <a href="https://example.com/ad6" target="_blank">
+                        <img src="images/ad6.jpg" alt="Quảng cáo phụ 2">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -264,9 +307,73 @@
             <button class="checkout">Mua Hàng</button>
         </div>
     </footer>
+<!-- Chat Icon -->
+<div class="chat-icon">💬 Chat <span class="chat-badge">1</span></div>
 
-    <div class="chat-icon">💬 Chat <span class="chat-badge">1</span></div>
-    <script src="script.js"></script>
+<!-- Chat Window (Ẩn mặc định) -->
+<div class="chat-window" id="chat-window">
+    <div class="chat-header">
+        <h3>Chat</h3>
+        <button class="chat-close-btn">✖</button>
+    </div>
+    <div class="chat-container">
+        <!-- Danh sách hội thoại bên trái -->
+        <div class="chat-sidebar">
+            <div class="chat-search">
+                <input type="text" placeholder="Tìm theo tên">
+                <select>
+                    <option>Tất cả</option>
+                    <option>Chưa đọc</option>
+                </select>
+            </div>
+            <div class="chat-list">
+                <div class="chat-item active">
+                    <img src="images/shop-logo.jpg" alt="Shop Logo">
+                    <div class="chat-info">
+                        <p class="shop-name">Vietnam Official</p>
+                        <p class="last-message">Chat ngay</p>
+                    </div>
+                </div>
+                <div class="chat-item">
+                    <img src="images/shop-logo2.jpg" alt="Shop Logo">
+                    <div class="chat-info">
+                        <p class="shop-name">Topick GL</p>
+                        <p class="last-message">Ngầy hôm qua</p>
+                    </div>
+                </div>
+                <div class="chat-item">
+                    <img src="images/shop-logo3.jpg" alt="Shop Logo">
+                    <div class="chat-info">
+                        <p class="shop-name">Tiêu Dùng</p>
+                        <p class="last-message">Ngầy hôm qua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nội dung chat bên phải -->
+        <div class="chat-content">
+            <div class="chat-messages">
+                <div class="message received">
+                    <p>Chào bạn, chúng tôi có thể giúp gì cho bạn.</p>
+                    <span class="timestamp">00:02</span>
+                </div>
+                <div class="message sent">
+                    <p>Bạn có thể giúp mình được không!</p>
+
+                    <span class="timestamp">10:52</span>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Nhập nội dung tin nhắn">
+                <button>📎</button>
+                <button>😊</button>
+                <button>📷</button>
+                <button>➤</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 
 </html>
