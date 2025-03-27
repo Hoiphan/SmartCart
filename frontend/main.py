@@ -13,6 +13,9 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 from kivy.graphics import Color, Rectangle
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.recycleboxlayout import RecycleBoxLayout
+from backend.service.func_prompt import ask_gemini, res_gemini 
 
 Builder.load_string('''
 <ProductList>:
@@ -37,6 +40,27 @@ Builder.load_string('''
         valign: 'middle'
         halign: 'left'
         text_size: self.size
+                    
+<ChatList>:
+    viewclass: 'ChatItem'
+    RecycleBoxLayout:
+        default_size: None, dp(100)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+
+<ChatItem>:
+    orientation: 'horizontal'
+    spacing: dp(10)
+    padding: dp(10)
+    Label:
+        text: root.text
+        valign: 'top'
+        halign: 'left'
+        text_size: self.width, None  # Đặt text_size chỉ theo chiều ngang
+        size_hint_y: None
+        height: self.texture_size[1] + dp(10)  # Tự động co giãn chiều cao    
 ''')
 
 class ProductItem(RecycleDataViewBehavior, BoxLayout):
@@ -113,11 +137,65 @@ class ResultScreen(Screen):
     def go_back(self, instance):
         self.sm.current = 'search'
 
+class ChatList(RecycleView):
+    """ Chat message list using RecycleView """
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.viewclass = 'Label'  # Each message is displayed in a Label
+        self.data = []  # Chat history
+
+    def add_message(self, text, sender="User"):
+        """ Add a new message to the chat """
+        self.data.append({'text': f"{sender}: {text}"})
+        self.refresh_from_data()
+
+class ChatItem(RecycleDataViewBehavior, BoxLayout):
+    text = StringProperty("")
+
+class ChatScreen(Screen):
+    """ Main chat screen where user interacts with the bot """
+    def __init__(self, sm, **kwargs):
+        super().__init__(**kwargs)
+        self.sm = sm
+        layout = BoxLayout(orientation='vertical')
+
+        self.chat_list = ChatList()
+
+        self.user_input = TextInput(size_hint_y=None, height=50, multiline=False)
+        send_button = Button(text="Send", size_hint_y=None, height=50)
+        send_button.bind(on_press=self.send_message)
+
+        input_layout = BoxLayout(size_hint_y=None, height=50)
+        input_layout.add_widget(self.user_input)
+        input_layout.add_widget(send_button)
+
+        layout.add_widget(self.chat_list)
+        layout.add_widget(input_layout)
+        self.add_widget(layout)
+
+    def send_message(self, instance):
+        """ Send user message and receive bot response """
+        user_text = self.user_input.text.strip()
+        if user_text:
+            self.chat_list.add_message(user_text, sender="User")
+            self.user_input.text = ""  # Clear input field
+
+            # Simulate bot response
+            bot_response = self.bot_reply(user_text)
+            self.chat_list.add_message(bot_response, sender="Bot")
+
+    def bot_reply(self, user_message):
+        """ Simple bot response logic """
+        response = res_gemini(user_message)
+        # return responses.get(user_message.lower(), "I'm not sure how to respond to that. 🤔")
+        return response
+
 class MyApp(App):
     def build(self):
         sm = ScreenManager()
         sm.add_widget(SearchScreen(name='search', sm=sm))
         sm.add_widget(ResultScreen(name='result', sm=sm))
+        sm.add_widget(ChatScreen(name="chat", sm=sm))
         return sm
 
 if __name__ == "__main__":
