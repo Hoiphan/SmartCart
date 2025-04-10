@@ -1,3 +1,4 @@
+
 import itertools
 import time
 import streamlit as st
@@ -5,6 +6,10 @@ from backend.service.product_searching_service import ProductSearching
 from backend.service.func_prompt import res_gemini
 from backend.service.voice_speech_to_text import speech_to_text
 from streamlit_float import *
+import pandas as pd
+import numpy as np
+import time
+from datetime import datetime
 
 
 
@@ -131,8 +136,52 @@ def contact_page():
     st.title("Liên hệ")
     st.write("Bạn có thể liên hệ chúng tôi qua email: contact@example.com")
 
+
 def Device():
-    st.title("Thiết bị")
+    st.title("Dữ liệu Smartcart (Real-Time)")
+
+    # Số lượng điểm dữ liệu cần hiển thị tại mỗi thời điểm
+    n_points = 20
+    
+    # Tạo vùng trống để cập nhật lại chart
+    chart_placeholder = st.empty()
+
+    # Dữ liệu thời gian thực
+    times = []
+
+    # Sử dụng vòng lặp để cập nhật dữ liệu theo thời gian thực
+    while True:
+        # Giả lập dữ liệu cho 'weight' và 'voltage'
+        np.random.seed(int(time.time()))  # Sử dụng thời gian hiện tại làm seed để đảm bảo dữ liệu ngẫu nhiên
+        weight = np.random.normal(100, 10)  # Trọng lượng với trung bình 100kg và độ lệch chuẩn 10
+        voltage = np.random.normal(5, 0.1)  # Điện áp với trung bình 5V và độ lệch chuẩn 0.1
+
+        # Lấy thời gian hiện tại
+        current_time = datetime.now()
+
+        # Thêm thời gian và dữ liệu vào danh sách
+        times.append(current_time)
+        
+        # Giới hạn số điểm dữ liệu hiển thị
+        if len(times) > n_points:
+            times.pop(0)
+
+        # Tạo DataFrame
+        chart_data = pd.DataFrame({
+            'Time': times,
+            'Weight (kg)': np.random.normal(100, 10, len(times)),
+            'Voltage (V)': np.random.normal(5, 0.1, len(times))
+        })
+
+        # Hiển thị dữ liệu dạng bảng
+        # chart_placeholder.write(chart_data)
+
+        # Hiển thị biểu đồ line chart
+        chart_placeholder.line_chart(chart_data.set_index('Time'))
+
+        # Dừng lại 1 giây để mô phỏng cập nhật dữ liệu theo thời gian thực
+        time.sleep(3)
+
 
 if __name__ == "__main__":
     main()
