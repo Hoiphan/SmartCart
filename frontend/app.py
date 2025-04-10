@@ -6,9 +6,12 @@ from backend.service.func_prompt import res_gemini
 from backend.service.voice_speech_to_text import speech_to_text
 from streamlit_float import *
 
+
+
+
 def main():
     st.sidebar.title("Menu")
-    page = st.sidebar.radio("Chọn trang:", ["Trang chủ", "Sản phẩm", "Trợ lý", "Liên hệ"])
+    page = st.sidebar.radio("Chọn trang:", ["Trang chủ", "Sản phẩm", "Trợ lý","Thiết bị", "Liên hệ"])
     
     if page == "Trang chủ":
         home_page()
@@ -18,6 +21,9 @@ def main():
         about_page()
     elif page == "Liên hệ":
         contact_page()
+    elif page == "Thiết bị":
+        Device()
+
 
 def home_page():
     st.title("Trang chủ")
@@ -124,6 +130,9 @@ def about_page():
 def contact_page():
     st.title("Liên hệ")
     st.write("Bạn có thể liên hệ chúng tôi qua email: contact@example.com")
+
+def Device():
+    st.title("Thiết bị")
 
 if __name__ == "__main__":
     main()
