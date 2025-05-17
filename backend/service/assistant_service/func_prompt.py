@@ -78,18 +78,4 @@ def res_gemini(prompt: str):
         contents=ask_gemini(prompt),
     )
 
-<<<<<<< Updated upstream
     return response.text
-
-# while True:
-#     x = input("Hãy cho tôi 1 số món ăn yêu thích của bạn: ")
-#     print(res_gemini(x))
-
-
-
-
-
-
-=======
-    return response.text
->>>>>>> Stashed changes
