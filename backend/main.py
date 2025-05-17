@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 from fastapi import Body, FastAPI
 from pydantic import BaseModel
 from fastapi import Request
@@ -42,3 +43,10 @@ def ask_gemini(
     text_gemini = res_gemini(text)
     
     return {"response": f"{text_gemini}"}  # Return as plain text or JSON
+=======
+from service.product_recommendation_service import ProductRecommendationService
+
+if __name__ == '__main__':
+    prs = ProductRecommendationService()
+    print(prs.recommend_next_product([1, 2]))
+>>>>>>> Stashed changes

@@ -1,12 +1,12 @@
 {
     "products": [
         {
-            "product_id": 1,
+            "product_id": 2,
             "price": 49000,
             "quantity": 1,
             "total": 49000
         }, {
-            "product_id": 2,
+            "product_id": 5,
             "price": 35000,
             "quantity": 1,
             "total": 35000

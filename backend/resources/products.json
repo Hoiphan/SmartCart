@@ -1,397 +1,117 @@
 [
     {
-        "product_id": 1,
-        "product_name": "Diary Milk",
-        "price": "49000",
-        "category": "Drink",
-        "description": "Sữa tươi nguyên chất, giàu canxi và vitamin, tốt cho sức khỏe.",
-        "brand": "Vinamilk",
+        "product_id": 0,
+        "product_name": "Sữa đặc có đường Ông Thọ",
+        "price": "26000",
+        "category": "Sữa",
+        "description": "Sữa béo lắm luôn.",
+        "brand": "Ông Thọ (Việt Nam)",
         "origin": "Việt Nam",
         "expiry_date": "2025-12-31",
         "manufacture_date": "2024-01-15",
-        "volume": "180ml",
-        "ingredients": ["Sữa bò tươi", "Đường", "Hương vani"],
+        "volume": "380g",
+        "ingredients": ["Nước", "Đường", "sữa bột", "chất béo"],
         "nutrition_facts": {"calories": 120, "protein": "3g", "fat": "4g", "carbohydrates": "12g"},
         "stock": 150,
         "rating": 4.5,
-        "reviews": [
-            {"user": "Nguyễn Văn A", "comment": "Sữa thơm ngon, bé nhà mình rất thích!", "rating": 5},
-            {"user": "Trần Thị B", "comment": "Sữa uống ổn nhưng hơi ngọt.", "rating": 4}
-        ]
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\products\\0.jpg",
+        "reviews": []
     },
     {
-        "product_id": 2,
-        "product_name": "Oishi Potato Chips",
-        "price": "25000",
-        "category": "Snack",
-        "description": "Snack giòn tan, vị mặn ngọt hài hòa, thích hợp cho mọi lứa tuổi.",
-        "brand": "Oishi",
+        "product_id": 1,
+        "product_name": "Xốt mayonnaise Ajinomoto Aji-mayo",
+        "price": "20000",
+        "category": "Xốt",
+        "description": "Chua béo",
+        "brand": "Ajinomoto",
         "origin": "Việt Nam",
         "expiry_date": "2025-06-30",
         "manufacture_date": "2024-03-10",
-        "volume": "150g",
-        "ingredients": ["Khoai tây", "Dầu thực vật", "Muối", "Hương vị tổng hợp"],
+        "volume": "130g",
+        "ingredients": ["Dầu thực vật", "mạch nha", "trứng gà tươi", "chất điều vị"],
         "nutrition_facts": {"calories": 150, "protein": "2g", "fat": "8g", "carbohydrates": "18g"},
         "stock": 200,
         "rating": 4.2,
-        "reviews": [
-            {"user": "Lê Văn C", "comment": "Snack giòn, vị vừa ăn.", "rating": 4},
-            {"user": "Phạm Thị D", "comment": "Hơi mặn nhưng đóng gói đẹp.", "rating": 4}
-        ]
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\products\\1.jpg",
+        "reviews": []
     },
 
     {
-        "product_id": 3,
-        "product_name": "TH True Milk Yogurt",
-        "price": "35000",
-        "category": "Drink",
-        "description": "Sữa chua lên men tự nhiên, hỗ trợ tiêu hóa, hương việt quất.",
-        "brand": "TH True Milk",
+        "product_id": 2,
+        "product_name": "Cá mòi xốt cà chua nắp giật 3 Cô Gái",
+        "price": "19000",
+        "category": "Đồ đóng hộp",
+        "description": "Ngon.",
+        "brand": "3 Cô Gái",
         "origin": "Việt Nam",
         "expiry_date": "2024-10-15",
         "manufacture_date": "2024-04-20",
-        "volume": "100ml",
-        "ingredients": ["Sữa tươi", "Men vi sinh", "Việt quất", "Đường"],
+        "volume": "155g",
+        "ingredients": ["Cá biển", "xốt cà chua", "dầu nành", "chất điều vị"],
         "nutrition_facts": {"calories": 80, "protein": "2.5g", "fat": "2g", "carbohydrates": "10g"},
         "stock": 180,
         "rating": 4.7,
-        "reviews": [
-            {"user": "Hoàng Văn E", "comment": "Sữa chua ngon, hợp khẩu vị.", "rating": 5}
-        ]
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\products\\2.jpg",
+        "reviews": []
     },
     {
-        "product_id": 4,
-        "product_name": "Trung Nguyen Coffee G7",
-        "price": "55000",
-        "category": "Drink",
+        "product_id": 3,
+        "product_name": "Cà Phê Hòa Tan Nescafe 3In1 Vị Rang Đậm",
+        "price": "70000",
+        "category": "Cà phê sữa",
         "description": "Cà phê hòa tan đậm đà, hương thơm nồng nàn.",
-        "brand": "Trung Nguyen",
+        "brand": "NesCafé ",
         "origin": "Việt Nam",
         "expiry_date": "2026-01-01",
         "manufacture_date": "2024-02-20",
-        "volume": "200g",
+        "volume": "340g",
         "ingredients": ["Cà phê nguyên chất", "Đường", "Chất tạo ngọt"],
         "nutrition_facts": {"calories": 5, "protein": "0g", "fat": "0g", "carbohydrates": "1g"},
         "stock": 180,
         "rating": 4.8,
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\products\\3.jpg",
         "reviews": [
             {"user": "Nguyễn Thị F", "comment": "Thơm ngon đúng vị cà phê Việt.", "rating": 5}
         ]
     },
     {
+        "product_id": 4,
+        "product_name": "Trà Lipton Ice Tea chanh mật ong",
+        "price": "29000",
+        "category": "Trà",
+        "description": "Trà Lipton Ice Tea vị chanh 224g là trà hòa tan vị chanh được làm từ các nguyên liệu tự nhiên.",
+        "brand": "Lipton",
+        "origin": "Việt Nam",
+        "expiry_date": "2026-05-30",
+        "manufacture_date": "2024-04-01",
+        "volume": "224g",
+        "ingredients": ["Nước khoáng"],
+        "nutrition_facts": {"calories": 0, "protein": "0g", "fat": "0g", "carbohydrates": "0g"},
+        "stock": 500,
+        "rating": 4.9,
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\products\\4.jpg",
+        "reviews": [
+            {"user": "Nguyễn Thị H", "comment": "Nước tinh khiết, uống mát lành", "rating": 5}
+        ]
+    },
+    {
         "product_id": 5,
-        "product_name": "Coca-Cola Zero Sugar",
-        "price": "20000",
+        "product_name": "Nước ngọt Coca Cola lon",
+        "price": "10600",
         "category": "Drink",
         "description": "Nước ngọt không calo, vị cola đậm đà.",
         "brand": "Coca-Cola",
         "origin": "Mỹ",
         "expiry_date": "2025-11-30",
         "manufacture_date": "2024-03-01",
-        "volume": "330ml",
+        "volume": "350g",
         "ingredients": ["Nước", "CO2", "Chất tạo ngọt", "Hương liệu"],
         "nutrition_facts": {"calories": 0, "protein": "0g", "fat": "0g", "carbohydrates": "0g"},
         "stock": 300,
         "rating": 4.6,
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\products\\5.jpeg",
         "reviews": [
             {"user": "Trần Văn G", "comment": "Ngọt dịu, phù hợp người ăn kiêng.", "rating": 4}
-        ]
-    },
-    {
-        "product_id": 6,
-        "product_name": "Lavie Mineral Water",
-        "price": "5000",
-        "category": "Drink",
-        "description": "Nước khoáng thiên nhiên, tinh khiết không qua xử lý hóa học.",
-        "brand": "Lavie",
-        "origin": "Việt Nam",
-        "expiry_date": "2026-05-30",
-        "manufacture_date": "2024-04-01",
-        "volume": "500ml",
-        "ingredients": ["Nước khoáng"],
-        "nutrition_facts": {"calories": 0, "protein": "0g", "fat": "0g", "carbohydrates": "0g"},
-        "stock": 500,
-        "rating": 4.9,
-        "reviews": [
-            {"user": "Nguyễn Thị H", "comment": "Nước tinh khiết, uống mát lành", "rating": 5}
-        ]
-    },
-
-    {
-        "product_id": 7,
-        "product_name": "P/S Toothpaste",
-        "price": "35000",
-        "category": "Personal Care",
-        "description": "Kem đánh răng ngừa sâu răng, hương bạc hà the mát.",
-        "brand": "P/S",
-        "origin": "Việt Nam",
-        "expiry_date": "2025-09-30",
-        "manufacture_date": "2023-12-15",
-        "volume": "150g",
-        "ingredients": ["Fluoride", "Calcium carbonate", "Tinh chất bạc hà"],
-        "nutrition_facts": "None",
-        "stock": 250,
-        "rating": 4.6,
-        "reviews": [
-            {"user": "Trần Văn K", "comment": "Hơi cay nhưng làm sạch tốt", "rating": 4}
-        ]
-    },
-
-    {
-        "product_id": 8,
-        "product_name": "OMO Detergent",
-        "price": "120000",
-        "category": "Household",
-        "description": "Bột giặt đa năng, đánh bay vết bẩn cứng đầu.",
-        "brand": "OMO",
-        "origin": "Hà Lan",
-        "expiry_date": "2026-03-31",
-        "manufacture_date": "2024-01-10",
-        "volume": "3kg",
-        "ingredients": ["Chất hoạt động bề mặt", "Enzyme", "Hương hoa"],
-        "nutrition_facts": "None",
-        "stock": 100,
-        "rating": 4.7,
-        "reviews": [
-            {"user": "Lê Thị M", "comment": "Giặt sạch và thơm lâu", "rating": 5}
-        ]
-    },
-
-    {
-        "product_id": 9,
-        "product_name": "Acecook Hảo Hảo",
-        "price": "8000",
-        "category": "Instant Noodles",
-        "description": "Mì ăn liền vị tôm chua cay, tiện lợi cho bữa ăn nhanh.",
-        "brand": "Acecook",
-        "origin": "Việt Nam",
-        "expiry_date": "2025-08-15",
-        "manufacture_date": "2024-03-25",
-        "volume": "75g",
-        "ingredients": ["Mì", "Dầu cọ", "Gia vị", "Tôm khô"],
-        "nutrition_facts": {"calories": 350, "protein": "8g", "fat": "15g", "carbohydrates": "45g"},
-        "stock": 400,
-        "rating": 4.3,
-        "reviews": [
-            {"user": "Phạm Văn N", "comment": "Vị đậm đà, giá hợp lý", "rating": 4}
-        ]
-    },
-
-    {
-        "product_id": 10,
-        "product_name": "Oreo Original",
-        "price": "45000",
-        "category": "Snack",
-        "description": "Bánh quy socola sandwich với nhân kem phong cách cổ điển.",
-        "brand": "Oreo",
-        "origin": "Mỹ",
-        "expiry_date": "2025-02-28",
-        "manufacture_date": "2024-04-05",
-        "volume": "150g",
-        "ingredients": ["Bột mì", "Đường", "Dầu thực vật", "Cacao"],
-        "nutrition_facts": {"calories": 140, "protein": "1g", "fat": "7g", "carbohydrates": "21g"},
-        "stock": 180,
-        "rating": 4.8,
-        "reviews": [
-            {"user": "Nguyễn Thị P", "comment": "Bánh ngon nhưng hơi ngọt", "rating": 4}
-        ]
-    },
-    {
-        "product_id": 11,
-        "product_name": "Dove Shampoo",
-        "price": "95000",
-        "category": "Personal Care",
-        "description": "Dầu gội dưỡng ẩm sâu cho tóc khô xơ.",
-        "brand": "Dove",
-        "origin": "Anh",
-        "expiry_date": "2026-07-31",
-        "manufacture_date": "2024-02-14",
-        "volume": "400ml",
-        "ingredients": ["Nước", "Sodium laureth sulfate", "Chiết xuất hoa cúc"],
-        "nutrition_facts": "None",
-        "stock": 120,
-        "rating": 4.5,
-        "reviews": [
-            {"user": "Trần Thị Q", "comment": "Tóc mềm mượt sau khi dùng", "rating": 5}
-        ]
-    },
-
-    {
-        "product_id": 12,
-        "product_name": "Knorr Seasoning",
-        "price": "25000",
-        "category": "Seasoning",
-        "description": "Bột nêm đa dụng từ thịt và rau củ tự nhiên.",
-        "brand": "Knorr",
-        "origin": "Đức",
-        "expiry_date": "2025-11-30",
-        "manufacture_date": "2024-01-05",
-        "volume": "100g",
-        "ingredients": ["Muối", "Đường", "Chiết xuất thịt", "Hành tỏi"],
-        "nutrition_facts": {"calories": 10, "protein": "0.5g", "fat": "0g", "carbohydrates": "2g"},
-        "stock": 300,
-        "rating": 4.6,
-        "reviews": [
-            {"user": "Lê Văn R", "comment": "Nêm nếm tiện lợi, vị ngon", "rating": 5}
-        ]
-    },
-
-    {
-        "product_id": 13,
-        "product_name": "Chupa Chups Lollipop",
-        "price": "15000",
-        "category": "Candy",
-        "description": "Kẹo mút hình tròn với nhiều hương vị trái cây.",
-        "brand": "Chupa Chups",
-        "origin": "Tây Ban Nha",
-        "expiry_date": "2025-05-31",
-        "manufacture_date": "2024-03-18",
-        "volume": "15g",
-        "ingredients": ["Đường", "Hương liệu tự nhiên", "Màu thực phẩm"],
-        "nutrition_facts": {"calories": 60, "protein": "0g", "fat": "0g", "carbohydrates": "15g"},
-        "stock": 250,
-        "rating": 4.4,
-        "reviews": [
-            {"user": "Phạm Thị S", "comment": "Kẹo ngọt, trẻ con thích", "rating": 4}
-        ]
-    },
-
-    {
-        "product_id": 14,
-        "product_name": "Red Bull Energy Drink",
-        "price": "30000",
-        "category": "Drink",
-        "description": "Nước tăng lực giúp tỉnh táo và tập trung.",
-        "brand": "Red Bull",
-        "origin": "Áo",
-        "expiry_date": "2025-04-30",
-        "manufacture_date": "2024-02-22",
-        "volume": "250ml",
-        "ingredients": ["Nước", "Đường", "Caffeine", "Taurine"],
-        "nutrition_facts": {"calories": 112, "protein": "0g", "fat": "0g", "carbohydrates": "28g"},
-        "stock": 200,
-        "rating": 4.3,
-        "reviews": [
-            {"user": "Nguyễn Văn T", "comment": "Giúp tỉnh táo khi làm đêm", "rating": 4}
-        ]
-    },
-
-    {
-        "product_id": 15,
-        "product_name": "Nescafe Gold",
-        "price": "120000",
-        "category": "Drink",
-        "description": "Cà phê hòa tan cao cấp, hương vị đậm đà.",
-        "brand": "Nescafe",
-        "origin": "Thụy Sĩ",
-        "expiry_date": "2026-02-28",
-        "manufacture_date": "2024-03-12",
-        "volume": "100g",
-        "ingredients": ["Cà phê nguyên chất", "Đường"],
-        "nutrition_facts": {"calories": 5, "protein": "0g", "fat": "0g", "carbohydrates": "1g"},
-        "stock": 150,
-        "rating": 4.7,
-        "reviews": [
-            {"user": "Trần Thị U", "comment": "Hương vị thơm ngon đúng chất", "rating": 5}
-        ]
-    },
-    {
-        "product_id": 16,
-        "product_name": "Maggi Soy Sauce",
-        "price": "28000",
-        "category": "Seasoning",
-        "description": "Nước tương đậm đặc, dùng để chấm hoặc ướp thực phẩm.",
-        "brand": "Maggi",
-        "origin": "Thụy Sĩ",
-        "expiry_date": "2025-09-30",
-        "manufacture_date": "2024-01-20",
-        "volume": "250ml",
-        "ingredients": ["Đậu nành", "Muối", "Đường", "Chất điều vị"],
-        "nutrition_facts": {"calories": 20, "protein": "2g", "fat": "0g", "carbohydrates": "3g"},
-        "stock": 180,
-        "rating": 4.5,
-        "reviews": [
-            {"user": "Lê Văn V", "comment": "Vị mặn ngọt cân đối", "rating": 4}
-        ]
-    },
-
-    {
-        "product_id": 17,
-        "product_name": "Lifebuoy Body Wash",
-        "price": "85000",
-        "category": "Personal Care",
-        "description": "Sữa tắm diệt khuẩn, hương thơm tươi mát.",
-        "brand": "Lifebuoy",
-        "origin": "Anh",
-        "expiry_date": "2026-06-30",
-        "manufacture_date": "2024-02-10",
-        "volume": "500ml",
-        "ingredients": ["Nước", "Sodium laureth sulfate", "Triclosan", "Hương liệu"],
-        "nutrition_facts": "None",
-        "stock": 90,
-        "rating": 4.4,
-        "reviews": [
-            {"user": "Phạm Thị X", "comment": "Sạch sẽ và thơm lâu", "rating": 4}
-        ]
-    },
-
-    {
-        "product_id": 18,
-        "product_name": "Neptune Cooking Oil",
-        "price": "75000",
-        "category": "Cooking",
-        "description": "Dầu ăn chiết xuất từ hạt cải, tốt cho sức khỏe.",
-        "brand": "Neptune",
-        "origin": "Việt Nam",
-        "expiry_date": "2025-12-31",
-        "manufacture_date": "2024-03-01",
-        "volume": "1 lít",
-        "ingredients": ["Dầu hạt cải tinh luyện"],
-        "nutrition_facts": {"calories": 120, "protein": "0g", "fat": "14g", "carbohydrates": "0g"},
-        "stock": 200,
-        "rating": 4.6,
-        "reviews": [
-            {"user": "Nguyễn Văn Y", "comment": "Dầu trong, không mùi khét", "rating": 5}
-        ]
-    },
-
-    {
-        "product_id": 19,
-        "product_name": "Cosy Biscuit",
-        "price": "35000",
-        "category": "Snack",
-        "description": "Bánh quy bơ giòn tan, hương vị truyền thống.",
-        "brand": "Cosy",
-        "origin": "Việt Nam",
-        "expiry_date": "2025-04-15",
-        "manufacture_date": "2024-04-01",
-        "volume": "200g",
-        "ingredients": ["Bột mì", "Đường", "Bơ", "Trứng"],
-        "nutrition_facts": {"calories": 110, "protein": "2g", "fat": "5g", "carbohydrates": "15g"},
-        "stock": 160,
-        "rating": 4.5,
-        "reviews": [
-            {"user": "Trần Thị Z", "comment": "Bánh giòn, hợp ăn sáng", "rating": 4}
-        ]
-    },
-
-    {
-        "product_id": 20,
-        "product_name": "Sunlight Dish Soap",
-        "price": "40000",
-        "category": "Household",
-        "description": "Nước rửa chén diệt khuẩn, hương chanh tươi mát.",
-        "brand": "Sunlight",
-        "origin": "Hà Lan",
-        "expiry_date": "2026-04-30",
-        "manufacture_date": "2024-01-05",
-        "volume": "500ml",
-        "ingredients": ["Chất hoạt động bề mặt", "Hương chanh", "Chất bảo quản"],
-        "nutrition_facts": "None",
-        "stock": 220,
-        "rating": 4.7,
-        "reviews": [
-            {"user": "Lê Văn W", "comment": "Rửa sạch dầu mỡ nhanh", "rating": 5}
         ]
     }
 ]

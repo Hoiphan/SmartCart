@@ -1,7 +1,32 @@
 [
     {
+        "product_id": 0,
+        "description": "Mua 2 tặng 1",
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\promotions\\0.jpg"
+    },
+    {
         "product_id": 1,
         "description": "Mua 2 tặng 1",
-        "image": "path/to/image"
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\promotions\\1.jpg"
+    },
+    {
+        "product_id": 2,
+        "description": "Mua 2 tặng 1",
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\promotions\\2.jpg"
+    },
+    {
+        "product_id": 3,
+        "description": "Mua 2 tặng 1",
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\promotions\\3.jpg"
+    },
+    {
+        "product_id": 4,
+        "description": "Mua 2 tặng 1",
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\promotions\\4.jpg"
+    },
+    {
+        "product_id": 5,
+        "description": "Mua 2 tặng 1",
+        "image": "C:\\Users\\tam\\Desktop\\pythonProject\\doan\\backend\\resources\\images\\promotions\\5.jpg"
     }
 ]
